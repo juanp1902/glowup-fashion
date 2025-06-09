@@ -1,0 +1,46 @@
+
+/* Grid para productos */
+#productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 24px 0;
+}
+.producto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.producto img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.producto h3 {
+  margin: 8px 0 4px;
+}
+.producto p {
+  margin: 4px 0 12px;
+  font-weight: bold;
+}
+.agregar-al-carrito {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.agregar-al-carrito:hover {
+  background: #0056b3;
+}

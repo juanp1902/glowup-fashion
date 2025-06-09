@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background: #f9f9f9;
+  color: #222;
+  background-image: url('/images/logo.jpg'); /* Ruta de tu logo */
+  background-size: contain; /* Ajusta el tamaño para que se vea completo */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-position: center; /* Lo centra en la página */
+}
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+h1 {
+  color: #2c3e50;
+}
+p {
+  line-height: 1.7;
+}

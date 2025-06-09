@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venta de ropa juvenil</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor-header">
+        <div class="logo">
+          <img src="images/logo.jpg" alt="Logo de la tienda" />
+        </div>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="pages/acerca.html">Nosotros</a></li>
+            <li><a href="pages/formulario.html">formulario</a></li>
+          </ul>
+        </nav>
+
+        <div class="carrito">
+          <button onclick="irAlCarrito()">🛒 Carrito</button>
+        </div>
+      </div>
+    </header>
+
+    <p class="centrado">
+      Somos una empresa dedicada a la venta de ropa juvenil, enfocada en ofrecer
+      las últimas tendencias en moda para chicos y chicas que buscan expresar su
+      estilo único...
+    </p>
+
+    <h2>Estilos</h2>
+
+    <div class="contenedor-tarjetas">
+      <section
+        class="tarjeta"
+        onclick="mostrarMensaje('ropa con estilo urbano')"
+      >
+        <h3>URBANO</h3>
+        <p>
+          Inspirado en el skate, hip hop y cultura callejera, relajado pero con
+          actitud.
+        </p>
+        <img src="/images/imagenes urbanas1/artefunny.jpg" alt="Estilo urbano" />
+        <a href="pages/urbano.html">Ver más</a>
+      </section>
+
+      <section
+        class="tarjeta"
+        onclick="mostrarMensaje('ropa con estilo casual')"
+      >
+        <h3>CASUAL</h3>
+        <p>Estilo cómodo, sencillo y versátil para el día a día.</p>
+        <img src="/images/CASUAL2/casual.jpg" alt="Estilo casual" />
+        <a href="pages/casual.html">Ver más</a>
+      </section>
+
+      <section class="tarjeta" onclick="mostrarMensaje('ropa deportiva')">
+        <h3>DEPORTIVO</h3>
+        <p>Para quienes buscan comodidad y tendencia al mismo tiempo.</p>
+        <img src="/images/DEPORTIVO3/setdeportivo.jpg" alt="Estilo deportivo" />
+        <a href="pages/deportivo.html">Ver más</a>
+      </section>
+
+      <section class="tarjeta" onclick="mostrarMensaje('ropa alterna')">
+        <h3>ALTERNO</h3>
+        <p>Estilo atrevido, con influencias punk, grunge, emo o gótico.</p>
+        <img src="/images/ALTERNATIVO4/set.jpg" alt="Estilo alterno" />
+        <a href="pages/alterna.html">Ver más</a>
+      </section>
+
+    </div>
+    <footer>
+      <div class="footer-container">
+          <p>© 2025 Moda Juvenil | Todos los derechos reservados.</p>
+          <p>Contacto: <a href="#mailto:info@modajuvenil.com">info@modajuvenil.com</a></p>
+          <p>Síguenos en redes sociales:</p>
+          <ul class="social-links">
+              <li><a href="#https://www.instagram.com/Moda_juvenil" target="_blank">Instagram</a></li>
+              <li><a href="#https://www.tiktok.com/@juvenil_shop" target="_blank">TikTok</a></li>
+              <li><a href="#https://www.facebook.com/glouwp_fashion" target="_blank">Facebook</a></li>
+          </ul>
+      </div>
+  </footer>
+    <script src="/js/productos.js"></script>
+    <script src="/js/JavaScript para el Carrito de Compras"></script>
+    <script src="/js/carrito.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+ // Estructura para guardar los productos en el carrito
+let carrito = [];
+
+// Referencias del DOM
+const productosEnCarritoDiv = document.getElementById('productos-en-carrito');
+const totalCarritoSpan = document.getElementById('total');
+const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+const procederPagoBtn = document.getElementById('proceder-pago');
+
+// Productos (Ejemplo de productos estáticos)
+const productos = [
+    { id: 1, nombre: "Producto 1", precio: 19.99, img: "producto1.jpg" },
+    { id: 2, nombre: "Producto 2", precio: 29.99, img: "producto2.jpg" },
+    // Agrega más productos aquí
+];
+
+// Función para actualizar el carrito en el DOM
+function actualizarCarrito() {
+    // Limpiar el contenedor de productos
+    productosEnCarritoDiv.innerHTML = '';
+
+    // Calcular el total
+    let total = 0;
+
+    carrito.forEach(producto => {
+        total += producto.precio;
+        const productoHTML = `
+            <div class="producto-en-carrito">
+                <img src="${producto.img}" alt="${producto.nombre}">
+                <h3>${producto.nombre}</h3>
+                <p>$${producto.precio}</p>
+            </div>
+        `;
+        productosEnCarritoDiv.innerHTML += productoHTML;
+    });
+
+    // Actualizar el total
+    totalCarritoSpan.textContent = total.toFixed(2);
+}
+
+// Función para agregar productos al carrito
+function agregarAlCarrito(productoId) {
+    const producto = productos.find(p => p.id === productoId);
+    if (producto) {
+        carrito.push(producto);
+        actualizarCarrito();
+}
+
+// Función para vaciar el carrito
+vaciarCarritoBtn.addEventListener('click', () => {
+    carrito = [];
+    actualizarCarrito();
+});
+
+// Función para proceder al pago (solo muestra un mensaje por ahora)
+procederPagoBtn.addEventListener('click', () => {
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos primero.");
+    } else {
+        alert("¡Gracias por tu compra! Procederemos con el pago.");
+    }
+});
+
+// Agregar productos al carrito al hacer clic
+const botonesAgregar = document.querySelectorAll('.agregar-al-carrito');
+botonesAgregar.forEach(boton => {
+    boton.addEventListener('click', () => {
+        const productoId = parseInt(boton.closest('.producto').getAttribute('data-id'));
+        agregarAlCarrito(productoId);
+    });
+});
+}
